@@ -1,0 +1,13 @@
+div{
+    background-color:yellow;
+    width:150px;
+    height:150px;
+    padding:20px 30px;
+    padding: 20px 30px;
+    margin: 10px;
+    color:blue;
+    font-size:30px;
+    font-style:italic;
+    font-weight:bold;
+    border: 5px solid black;
+}

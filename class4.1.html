@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: yellow;
+            width: 120px;
+            height: 120px;
+            text-align: center;
+            text-transform: capitalize;
+            border-radius: 20px;
+        }
+        div:hover {
+            background-color: rgb(300, 0, 200);
+            color: white;
+        }
+        div:first-letter {
+            font-size: 30px;
+            color: red;
+        }
+        div::before {
+            content: "first";
+            color: blue;
+        }
+        div::after {
+            content: "second";
+            color: green;
+        }
+        #Circle{
+            background-color: chartreuse;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            box-shadow: inset 2px 1px 10px 2px grey;
+
+        }
+        #Rectangle{
+            background-color: coral;
+            height: 100px;
+            width: 200px;
+            box-shadow: inset 2px 1px 10px 2px grey;
+
+        }
+        #Square{
+            background-color: lightblue;
+            height: 100px;
+            width: 100px;
+            box-shadow: inset 2px 1px 10px 2px grey;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="Circle">Circle</div><br>
+    <div id="Rectangle">Rectangle</div><br>
+    <div id="Square">Square</div>
+    
+</body>
+</html>

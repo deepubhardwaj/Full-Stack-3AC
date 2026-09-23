@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- transform- what type of change should happen -->
+     <!-- transition- how smoothly the change should happen -->
+      <!-- timing function -->
+       <!-- ease - starts slow, then fast, then slow -->
+        <!-- linear - constant speed -->
+         <!-- ease-in - starts slow, then fast
+          ease-out - starts fast, then slow
+           ease-in-out - starts slow, then fast, then slow -->
+    <style>
+        /* .box {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            margin: 10px;
+            transition-property: transform;
+            transition-duration: 2s;
+        }
+        .linear {
+            transition-timing-function: linear;
+        }
+        .ease {
+            transition-timing-function: ease;
+        }
+        .ease-in {
+            transition-timing-function: ease-in;
+        }
+        .ease-out {
+            transition-timing-function: ease-out;
+        }
+        .ease-in-out {
+            transition-timing-function: ease-in-out;
+        }   
+        body:hover .box {
+            transform: translateX(200px);
+            transform: translateY(300px);
+            transform: rotate(360deg);
+        } */
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .square:hover {
+            background-color: rgb(231, 97, 119);
+            width: 300px;
+
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+
+            transition: all 1s 0.5s ;
+        } 
+
+        
+    </style>
+</head>
+<body>
+    <div class="square"></div>
+    <!-- <div class="box linear">Linear</div>
+    <div class="box ease">Ease</div>
+    <div class="box ease-in">Ease-In</div>
+    <div class="box ease-out">Ease-Out</div>
+    <div class="box ease-in-out">Ease-In-Out</div> -->
+
+
+
+</body>
+</html>
