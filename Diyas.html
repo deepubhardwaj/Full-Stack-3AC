@@ -1,0 +1,151 @@
+Complete HTML + CSS Code
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diwali Festival</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #14001f;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        /* Heading */
+        h1 {
+            color: #ffd700;
+            font-size: 45px;
+            margin-top: 40px;
+            text-shadow: 0 0 15px orange;
+        }
+
+        p {
+            font-size: 20px;
+            margin: 15px;
+        }
+
+        /* Diya container */
+        .diya-container {
+            margin: 80px auto;
+            position: relative;
+            width: 250px;
+            height: 220px;
+        }
+
+        /* Flame */
+        .flame {
+            width: 55px;
+            height: 80px;
+            background: orange;
+            border-radius: 50% 50% 50% 0;
+            transform: rotate(-45deg);
+            position: absolute;
+            top: 0;
+            left: 98px;
+            box-shadow: 0 0 30px yellow;
+        }
+
+        /* Inner flame */
+        .flame::after {
+            content: "";
+            width: 25px;
+            height: 40px;
+            background: yellow;
+            border-radius: 50%;
+            position: absolute;
+            top: 25px;
+            left: 15px;
+        }
+
+        /* Diya bowl */
+        .diya {
+            width: 220px;
+            height: 100px;
+            background: linear-gradient(#ff9d00, #b43b00);
+            border-radius: 0 0 120px 120px;
+            position: absolute;
+            bottom: 20px;
+            left: 15px;
+            box-shadow: 0 10px 25px orange;
+        }
+
+        /* Wick */
+        .wick {
+            width: 8px;
+            height: 35px;
+            background: #222;
+            position: absolute;
+            top: 75px;
+            left: 121px;
+            transform: rotate(15deg);
+        }
+
+        /* Rangoli */
+        .rangoli {
+            width: 180px;
+            height: 180px;
+            border: 8px dotted #ff69b4;
+            border-radius: 50%;
+            margin: 20px auto;
+            padding-top: 65px;
+            color: #00ffff;
+            font-weight: bold;
+        }
+
+        /* Button */
+        button {
+            background: #ff9800;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ff5722;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🪔 Happy Diwali 🪔</h1>
+
+    <p>
+        May this Diwali bring happiness, prosperity and success
+        to everyone.
+    </p>
+
+    <!-- Diya -->
+    <div class="diya-container">
+
+        <!-- Flame -->
+        <div class="flame"></div>
+
+        <!-- Wick -->
+        <div class="wick"></div>
+
+        <!-- Diya -->
+        <div class="diya"></div>
+
+    </div>
+
+    <!-- Rangoli -->
+    <div class="rangoli">
+        शुभ दीपावली
+    </div>
+
+    <button>Celebrate Diwali 🎉</button>
+
+</body>
+</html>
