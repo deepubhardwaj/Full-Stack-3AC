@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+</head>
+<body>
+
+    <!-- <h1>Task Manager</h1>
+    <form>
+        <label for="title">Task Title:</label>
+        <br><input type="text" name="title">
+        <br><label for="description">Task Description:</label>
+        <br><input type="text" name="description">
+        <br><label for="date">Date</label>
+        <br><input type="date" name="date">
+        <br><br><button>submit</button>
+    </form>
+
+    <table width="50%" cellpadding="30px" border="2">
+        <thead>
+            <tr>
+                <th>sno</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table> -->
+
+    <h1>Event Handling</h1>
+
+    <button onclick="eventHandler('Button clicked')">Click Me</button>
+
+    <button ondblclick="eventHandler('Button double clicked')">Click Me</button>
+
+    <button oncontextmenu="eventHandler('right click')">Click Me</button>
+
+    <button onmouseover="eventHandler('mouse over')">Click Me</button>
+
+    <button onmouseout="eventHandler('mouse out')">Click Me</button>
+
+    <button onmousedown="eventHandler('mouse down')">Click Me</button>
+
+    <button onmouseup="eventHandler('mouse up')">Click Me</button>
+
+    <input type="text" onfocus="console.log('focus')" onblur="console.log('blur')">
+
+    <select name="" id="">
+        <option>items</option>
+        <option>items1</option>
+    </select>
+
+    <input type="radio" name="radio" value="yes" id="">yes
+
+    <!-- <label for="yes">Yes</label> -->
+
+    <input type="radio" name="radio" value="no" id="">no
+
+    <!-- <label for="no">No</label> -->
+
+    <label for="">condition</label>
+    <br>
+
+    <input type="checkbox" value="condition">yes
+
+    <input type="checkbox" value="condition">no
+
+    <p></p>
+
+    <button id="btn">Submit</button>
+
+    <script>
+
+        // let form = document.querySelector("form");
+        // let tasks = [];
+        // let isUpdate = false;
+        // let updateIndex = null;
+        // let submitBtn = document.querySelector("button");
+        // console.log(form);
+
+        // form.addEventListener('submit', (event) => {
+        //     event.preventDefault();
+
+        //     let title = event.target.title.value;
+        //     let description = event.target.description.value;
+        //     let date = event.target.date.value;
+
+        //     console.log(title, description, date);
+
+        //     let newTask = {title, description, date};
+
+        //     if (isUpdate) {
+        //         tasks.splice(updateIndex, 1, newTask);
+        //         isUpdate = false;
+        //         updateIndex = null;
+        //         submitBtn.textContent = "Submit";
+        //     } else {
+        //         tasks.push(newTask);
+        //     }
+
+        //     form.reset();
+        //     showTasks();
+        // });
+
+        // let deletehandler = (index) => {
+        //     tasks.splice(index, 1);
+        //     showTasks();
+        // };
+
+        // let updatehandler = (index) => {
+        //     let input = document.querySelectorAll("input");
+
+        //     input[0].value = tasks[index].title;
+        //     input[1].value = tasks[index].description;
+        //     input[2].value = tasks[index].date;
+
+        //     isUpdate = true;
+        //     updateIndex = index;
+        //     submitBtn.textContent = "Update";
+        // };
+
+        // function showTasks() {
+        //     let tbody = document.querySelector("tbody");
+        //     tbody.innerHTML = "";
+
+        //     tasks.map((task, index) => {
+        //         tbody.innerHTML += `<tr>
+        //             <td>${index + 1}</td>
+        //             <td>${task.title}</td>
+        //             <td>${task.description}</td>
+        //             <td>${task.date}</td>
+        //             <td><button onclick="deletehandler(${index})">Delete</button></td>
+        //             <td><button onclick="updatehandler(${index})">Update</button></td>
+        //         </tr>`;
+        //     })
+        // }
+
+        // let btn = document.querySelector("button");
+
+        // btn.addEventListener("dblclick", (event) => {
+        //     console.log(event.type);
+        //     console.log(event.target);
+        //     event.target.style.color = "red";
+        // })
+
+        // let btns = document.querySelectorAll("button"); // btns --> body
+        // console.log(btns);
+
+        // btns.forEach((btn) => {
+        //     btn.addEventListener("click", (event) => {
+        //         console.log(event.target.textContent);
+        //         event.target.style.color = "green";
+        //     });
+        // });
+
+        // let body = document.querySelectorAll("body"); // btns --> body
+        // console.log(body);
+
+        // body.forEach((bd) => {
+        //     bd.addEventListener("click", (event) => {
+        //         console.log(event.target.textContent);
+        //         event.target.style.color = "green";
+        //     });
+        // });
+
+        // let body1 = document.querySelector("body");
+
+        // body1.addEventListener("click", (event) => {
+        //     body1.style.backgroundColor = event.target.textContent;
+
+        //     // console.log(event.type);
+        //     console.log(event.currentTarget);
+
+        //     // event.target.style.color = "red";
+        // });
+
+        // let body2 = document.querySelector("body");
+
+        // body2.addEventListener("click", (event) => {
+        //     console.log("body element");
+
+        //     // console.log(event.target);
+        //     // event.target.style.color = "red";
+        // });
+
+        // let btn1 = document.querySelector("body");
+
+        // body2.addEventListener("click", (event) => {
+        //     event.stopPropagation();
+
+        //     console.log("btn click");
+
+        //     // console.log(event.target);
+        //     // event.target.style.color = "red";
+        // });
+
+        // function eventHandler(event) {
+        //     console.log(event);
+        // }
+
+        // let btn = document.querySelector("button");
+
+        // btn.addEventListener("click", eventHandler);
+
+        // let input = document.querySelector("input");
+
+        // input.addEventListener("keyup", (event) => {
+        //     console.log(event.target.value, event.target.value.length);
+        // });
+
+        // let select = document.querySelector("select");
+
+        // select.addEventListener("change", (event) => {
+        //     console.log(event.target.value);
+        // });
+
+        // let input = document.querySelector("input");
+
+        // input.addEventListener("focus", (event) => {
+        //     document.querySelector("p").textContent = event.target.value;
+        // });
+
+        // document.querySelectorAll("#btn").addEventListener("click", (event) => {
+        //     let radio = document.querySelectorAll("input[type='radio']");
+        // });
+
+        document.querySelector("#btn").addEventListener("click", () => {
+
+            let check = document.querySelectorAll("input[type='checkbox']");
+
+            let checkoutput = [];
+
+            for (let i of check) {
+                if (i.checked) {
+                    checkoutput.push(i.value);
+                }
+            }
+
+            console.log(checkoutput);
+            let file=document.querySelector("input[type='file']");
+            console.log(file.files);
+            document.querySelector("img").src = URL.createObjectURL(file.files[0]);
+
+        });
+
+    </script>
+
+</body>
+</html>
